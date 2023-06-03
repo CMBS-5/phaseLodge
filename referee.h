@@ -8,6 +8,7 @@
 #include <QStackedWidget>
 #include "mainwindow.h"
 #include "scene.h"
+
 class MainWindow;
 class Referee : public QObject
 {
@@ -16,7 +17,7 @@ private:
     QStackedWidget *stackedWidget;
 
     MainWindow* mainwindow;
-
+    //门口向主座1、门口向东2、门口向西3、东座4、西座5、主座向东6、主座向西7
     Scene* frontHall_1;
     Scene* frontHall_2;
     Scene* frontHall_3;
@@ -40,6 +41,7 @@ public:
     void InitialConnection();
     void InitializeScene();
     void InitializeButton();
+    void InitializeItem();
     QWidget* getCurrentWidget();
 signals:
 
